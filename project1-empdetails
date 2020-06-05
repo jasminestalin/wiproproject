@@ -1,0 +1,58 @@
+int[] emno = new int[]{1001,1002,1003,1004,1005,1006,1007};
+		String[] empname= new String[] {"Ashish","Sushma","Rahul","chahat","Ranjan","Suman","Tanmay"};
+		char[] dc = new char[] {'e','c','k','r','m','e','c'};
+		String[] dept = new String[] {"R&D","Manager","Acct","Front Desk","Engg","Manufacturing","pm"};
+		int[] Basic= new int[] {20000,30000,10000,12000,500000,230000,290000};
+		int[] hra = new int[] {8000,12000,8000,6000,20000,9000,12000};
+		int[] it= new int[] {3000,9000,1000,2000,20000,4400,100000};
+		String[] desi = new String[7];
+		int[] da= new int[7];
+		int[] sal = new int[7];
+		int j;
+		for(int i=0;i<=6;i++)
+		{
+			switch(dc[i])
+			{
+			case 'e':
+				desi[i]="Engineer";
+				da[i]=20000;
+				break;
+			case 'c': 
+				desi[i]="Consultant";
+				da[i]=32000;
+				break;
+			case'k':
+			      desi[i]="clerk";
+			      da[i]=12000;
+			      break;
+			case'r': 
+			desi[i]="Receptionist";
+			da[i]=15000;
+			break;
+			case'm': 
+				desi[i]="Manager";
+				da[i]=40000;
+				break;
+			}
+		}
+		
+		for(j=0;j<=6;j++)
+			sal[j]=Basic[j]+hra[j]+da[j]-it[j];
+		int flag=0;
+		for(int k=0;k<=6;k++)
+		{
+			int jas=Integer.parseInt(args[0]);
+			
+			if(jas==emno[k])
+				{System.out.println("Emp no    Emp Name    Department  Designation   Salary");
+				System.out.print(emno[k]+"      "+ empname[k]+"          "+dept[k]+"       "+ desi[k]+"         "+sal[k]);
+				flag=1;
+				break;
+				}
+			
+					
+				}
+		if(flag==0)
+		System.out.println("There is no employee with empid:    "  +  args[0]);
+		
+					
